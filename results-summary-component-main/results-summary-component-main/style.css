@@ -1,0 +1,170 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+/* styling the container that affects the left and right side */
+.container{
+    display: flex;
+    width: 600px;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 1px 1px 20px 2px rgb(0, 0, 0.4);
+}
+
+/* left side which contains results */
+.left_side{
+    color: #efff;
+    padding: 20px;
+    width: 40%;
+    border-radius: 20px;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    text-align: center
+}
+
+/* right side styling which contains summary of results */
+.right_side{
+    width: 50%;
+    padding: 20px;
+}
+
+/* The results header stylinimg 
+.left_side h4{
+    text-align: center;
+}*/
+
+/* adding style to the circle contained in the left side and making the circle be in the center of the container */
+.score-left_side{
+ padding: 50px;
+ width: 75px;
+ height: 75px;
+ border-radius: 100%;
+ box-shadow: inset 1px 1px 12px 0px hsla(256, 72%, 46%, 1);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ margin: 0 auto;
+}
+
+/* styling 76 in the circle by increasing the size */
+.big-large{
+    color: #efff;
+    font-weight: 700;
+    font-size: 60px;
+}
+
+/* styling Great text in the container */
+.left_side h3{
+}
+
+/* style for the score container for the right side */
+.score-container{
+    display: flex;
+}
+
+/*styling for the image icons */
+.score-container img{
+    margin-right: 5px;
+}
+
+/* style for score which affects reaction, memory, verbal and visual */
+.score{
+    display: flex;
+    justify-content: space-between;
+    background-color: hsla(0, 100%, 67%, 0.1);
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* making the text for the scores to be grey */
+.light-text{
+    color: rgba(87, 87, 88, 0.991);
+}
+
+/* making the text for the scores to be black */
+.black-text{
+    color: #222;
+    font-weight: bold;
+}
+
+/* color for reaction text */
+.score-reaction{
+    color: hsla(0, 100%, 67%);
+    
+}
+
+/* color for memory text also a background color */
+.score-memory{
+    color:  hsl(39, 100%, 56%);
+    background: hsla(39, 100%, 56%, 0.1) ;
+}
+
+/* color for visual text and also a background color */
+.score-memory{
+    color:  hsl(39, 100%, 56%);
+    background: hsla(39, 100%, 56%, 0.1) ;
+}
+
+
+/* color for verbal text also a background color*/
+.score-verbal{
+    color: hsl(166, 100%, 37%);
+    background: hsla(166, 100%, 37%, 0.1);
+}
+
+/* color for visual text also a background color*/
+.score-visual{
+   color: hsl(234, 85%, 45%);
+   background: hsla(234, 85%, 45%, 0.1);
+}
+
+
+/* Giving some style to the button and then making it fill the width of the right side */
+button{
+    margin-top: 31px;
+    padding: 15px 31px;
+    border: none;
+    color: white;
+    outline: none;
+    background-color: hsl(224, 30%, 27%);
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Making this challenge responsive using a max width of 760 meaning when it's smaller than 760px this is what should happen, so we add stykes to the left side,
+right side , left text and finally the container to make the mobile view be in a column and not side by side and the removal of all paddings it prevent overflows whatsoever */
+
+@media (max-width: 760px) {
+    .left_side {
+        width: 100%;
+        padding: 0px;
+        border-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .right_side {
+        padding: 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .left-text {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0px;
+        overflow: hidden;
+        padding: 0;
+    }
+}
